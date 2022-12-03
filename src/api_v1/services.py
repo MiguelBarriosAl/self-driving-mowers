@@ -4,11 +4,11 @@ from api_v1.logs import Logs
 logs = Logs()
 
 
-def movements(top, position, instructions):
+def movements(top: list, position: list, instructions: str) -> list:
     cardinal_points = ["0", "N", "E", "S"]
-    X = position[0]  # type: int
-    Y = position[1]  # type: int
-    coord = position[2]  # type: str
+    X = position[0]
+    Y = position[1]
+    coord = position[2]
     cardinal_index = cardinal_points.index(coord)
     instruction = Instruccions(X, Y, cardinal_index)
     for i in instructions:
