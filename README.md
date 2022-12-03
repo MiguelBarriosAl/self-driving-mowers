@@ -4,7 +4,7 @@ Application that helps in controlling new mowers that are able to cut the grass 
 
 
 # Installation and Run
-- Install python==3.10.7
+- Install python
 
         sudo apt update
 
