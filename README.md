@@ -32,9 +32,8 @@ Application that helps in controlling new mowers that are able to cut the grass 
 
 - Local Running (no production environment)
 
-    `cd \api_v1`
-
-    `uvicorn main:app --reload`
+  `cd .\src`
+  `uvicorn main:app --reload`
 
 # Services
 
@@ -57,6 +56,7 @@ Subsequently, for those that are in the same plane, it is not necessary to inclu
     }
 
 ### Output
+
 `[1, 3,"N"]`
 
 ### Request
@@ -69,4 +69,5 @@ Subsequently, for those that are in the same plane, it is not necessary to inclu
     }'
 
 #### Output
+
 `[5,1,"E"]`

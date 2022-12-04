@@ -5,7 +5,7 @@ logs = Logs()
 
 
 def movements(top: list, position: list, instructions: str) -> list:
-    cardinal_points = ["0", "N", "E", "S"]
+    cardinal_points = ["W", "N", "E", "S"]
     X = position[0]
     Y = position[1]
     coord = position[2]
@@ -15,7 +15,6 @@ def movements(top: list, position: list, instructions: str) -> list:
 
         if "L" in i:
             X, Y, coord = instruction.left()
-            print("Is L: ", X, Y, cardinal_points[coord])
             logs.info(X, Y, cardinal_points[coord])
 
         elif "R" in i:
@@ -33,6 +32,15 @@ def movements(top: list, position: list, instructions: str) -> list:
 
 
 class Instruccions:
+    """
+        C = [West, North, East, South]
+        If mower rotates, its orientation is updated.
+        f mower moves forward, a position is added with respect to its orientation
+            West -> X = X - 1
+            North -> Y = Y + 1
+            East -> X = X + 1
+            South -> X = Y - 1
+    """
 
     def __init__(self, X: int, Y: int, index: int):
         self.x = X
