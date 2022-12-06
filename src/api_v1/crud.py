@@ -4,8 +4,6 @@ from api_v1.schemas import Input
 from api_v1.services import movements
 
 __version__ = "0.1.0"
-
-
 router = APIRouter()
 
 
@@ -26,5 +24,3 @@ def post(payload: Input):
     instructions = payload.instructions
     output = movements(top, position, instructions)
     return output
-
-

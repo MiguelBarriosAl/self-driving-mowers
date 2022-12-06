@@ -2,7 +2,7 @@ import unittest
 from api_v1.services import movements
 
 
-class TestMovements(unittest.TestCase):
+class Test_Movements(unittest.TestCase):
     def setUp(self):
         self.expected = [5, 1, "E"]
 
